@@ -21,10 +21,9 @@ utils.getAjax = function(url){
 // get elements by id or class
 utils.getElement = function(id){
 	'use strict';
-	
 	if (typeof id === "string"){
 		if (id[0] === '#'){
-			el = document.getElementById(id.slice(1, id.length));
+			var el = document.getElementById(id.slice(1, id.length));
 			return [el];
 		} else if (id[0] === '.'){
 			return document.getElementsByClassName(id.slice(1, id.length));

@@ -1,3 +1,5 @@
+
+// chrome has some issues with xss
 var isChrome = false;
 var conf = {
 	"path": "./assets/img/",

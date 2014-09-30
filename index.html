@@ -9,7 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/site.css">
 </head>
 <body onload="init()">
+
+	<!-- if any error occures -->
+	<div id="error-container" class=well>
+		<h3>Problem on the page</h3>
+		<p id="error-message">Cannot load configurations!</p>
+	</div>
+
+	<!-- game container -->
 	<div class="game-container well">
+	
 		<!-- loading frame -->
 		<div id="loading-frame">
 			The game is starting..
@@ -46,11 +55,7 @@
 
 	</div>
 
-	<!-- if any error occures -->
-	<div id="error-container" class=well>
-		<h3>Problem on the page</h3>
-		<p id="error-message">Cannot load configurations!</p>
-	</div>
+	
 	<script src="assets/js/utils.js"></script>
 	<script src="assets/js/game.js"></script>
 	<script src="assets/js/app.js"></script>
