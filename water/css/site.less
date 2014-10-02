@@ -1,0 +1,49 @@
+
+
+.transition(@p, @d: 0.5s){
+	-webkit-transition: @p @d;
+	transition: @p @d;
+}
+
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	line-height: 1.4em;
+}
+
+
+.gconatiner{
+
+	border: 3px solid black;
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	a{
+		cursor: pointer;
+		&:hover{
+			background: #CACACA;
+		}
+		margin-top: 30px;
+	}
+
+	.gfield{
+
+		position: relative;		
+
+		div{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			border: 1px solid gray;
+
+			@x: 0.1s;	// moving speed
+
+			-webkit-transition: top @x, left @x;
+			transition: top @x, left @x;
+		}
+	}
+}

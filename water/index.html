@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WATER</title>
+	<title></title>
 </head>
-<body>
-	Water is good!
+<link rel="stylesheet" type="text/css" href="css/site.css">
+<body onload="init()">
+
+	<div id="container" class="gconatiner">
+		<div class="controller">
+			<a data-bind="click: $root.addItem">+ Create</a>
+		</div>
+		<div class="gfield" data-bind="foreach: $root.items">
+			<div data-bind="gitem: $data"></div>
+		</div>
+	</div>
+
+	<script src="js/knockout-3.2.0.js"></script>
+	<script src="js/customBindings.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
