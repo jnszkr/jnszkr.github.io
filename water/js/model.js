@@ -1,24 +1,17 @@
 function circle (data) {
 	var self 	= this;
 
-	!data && (data = {
-		name: "circle",
-		x: 0,
-		y: 0,
-		r: 1
-	});
-
-	console.log('---', data, !data);
-
-	self.name	= data.name || "circle";
-	self.x		= ko.observable(data.x);		// x position
-	self.y		= data.y;						// y position
-	self.r		= data.r;						// r
-	self.type	= "circle";
-
-	self.click 	= function(){
-		console.log("clicked", arguments, this);
+	for (var i in data)
+	{
+		self[i] = ko.observable(data[i]);
 	}
+
+	self["class"]		= "circle";
+
+	self["fill"] = ko.observable("");
+	self["stroke"] = ko.observable("none");
+	self["stroke-width"] = ko.observable(2);
+	self["selected"] = ko.observable(false);
 }
 
 
@@ -34,6 +27,9 @@ function canvas (data) {
 	}
 
 	self.select = function(item){
+		console.log("select", item);
+		self.selected() && (self.selected()["selected"](false));
+		item["selected"](true);
 		self.selected(item);
 	}
 

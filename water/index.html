@@ -2,20 +2,23 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/wstyle.css">
 </head>
-<link rel="stylesheet" type="text/css" href="css/site.css">
 <body onload="init()">
 
-	<svg id="myCanvas" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+	<svg id="myCanvas" class="canvas" viewBox="0 0 700 400" version="1.1" xmlns="http://www.w3.org/2000/svg" >
+		
 		<!-- ko foreach: $root.items -->
-		<!-- ko if: $data.type === "circle" -->
-		<circle data-bind="circle: $data"/>
+		<!-- ko if: $data.class === "circle" -->
+		<g data-bind="circle: $data">
+		</g>
 		<!-- /ko -->
 		<!-- /ko -->
 	</svg>
 
 	<script src="js/lib/knockout-3.2.0.js"></script>
-	
+
 	<script src="js/modules/zoom.js"></script>
 	<script src="js/modules/dragable.js"></script>
 	<script src="js/modules/circle.js"></script>

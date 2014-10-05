@@ -1,11 +1,10 @@
 
 function mockData () {
 	return [
-		new circle({x: 10, y: 5, r: 20}),
-		new circle({x: 10, y: 6, r: 2}),
-		new circle({x: 12, y: 7, r: 2}),
-		new circle({x: 60, y: 10, r: 2}),
-		new circle({x: 10, y: 5, r: 2}),
+		new circle({cx: 40, cy: 60, r: 20}),
+		new circle({cx: 312, cy: 70, r: 20}),
+		new circle({cx: 160, cy: 100, r: 20}),
+		new circle({cx: 210, cy: 150, r: 20}),
 	];
 }
 
