@@ -1,10 +1,11 @@
 
 function mockData () {
 	return [
-		new gitem({x: 0, y: 100, a: 0}),
-		new gitem({x: 40, y: 200, a: 0}),
-		new gitem({x: 20, y: 100, a: 0}),
-		new gitem({x: 10, y: 10, a: 0})
+		new circle({x: 10, y: 5, r: 20}),
+		new circle({x: 10, y: 6, r: 2}),
+		new circle({x: 12, y: 7, r: 2}),
+		new circle({x: 60, y: 10, r: 2}),
+		new circle({x: 10, y: 5, r: 2}),
 	];
 }
 
@@ -14,5 +15,5 @@ function init () {
 
 
 
-	ko.applyBindings(new container(mockData()), document.getElementById("container"))
+	ko.applyBindings(new canvas(mockData()), document.getElementById("myCanvas")[0])
 }

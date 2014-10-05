@@ -1,37 +1,41 @@
-
-function gitem (data) {
-
+function circle (data) {
 	var self 	= this;
 
-	!data && (data = {});
+	!data && (data = {
+		name: "circle",
+		x: 0,
+		y: 0,
+		r: 1
+	});
 
 	console.log('---', data, !data);
 
-	self.name	= data.name || "Box";
-	self.x		= ko.observable(data.x || 0);	// x position
-	self.y		= data.y || 0;	// y position
-	self.a		= data.a || 0;	// angle
+	self.name	= data.name || "circle";
+	self.x		= ko.observable(data.x);		// x position
+	self.y		= data.y;						// y position
+	self.r		= data.r;						// r
+	self.type	= "circle";
 
-	function move (x, y) {
-		var anim = setInterval(function(){
-			self.x(self.x()+10);
-		}, 200);
+	self.click 	= function(){
+		console.log("clicked", arguments, this);
 	}
-
-	//move();
 }
 
 
-function container (data) {
+function canvas (data) {
 	var self = this;
 
-	self.items	= ko.observableArray(data || []);
+	self.items		= ko.observableArray(data || []);
+	self.selected 	= ko.observable();
 
 	self.addItem = function(){
-		console.log("push", new gitem());
-		self.items.push(new gitem());
+		console.log("push", new circle());
+		self.items.push(new circle());
 	}
 
+	self.select = function(item){
+		self.selected(item);
+	}
 
 }
 
