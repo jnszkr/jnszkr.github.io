@@ -14,5 +14,5 @@ function init () {
 
 
 
-	ko.applyBindings(new canvas(mockData()), document.getElementById("myCanvas")[0])
+	ko.applyBindings(new canvas(mockData()), $(".svg-container")[0])
 }
