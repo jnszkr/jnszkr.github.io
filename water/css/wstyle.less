@@ -1,31 +1,36 @@
 
-@background: 			#eee;
-@background-stroke:		#ccc; 
-@stroke: 				#77bbba;
-@fill:					#ccc;
+@c-background: 			#eee;
+@c-stroke: 				#77bbba;
+@c-fill:				#ccc;
+
+@c-stroke:				#ccc;
+@c-fill:				transparent;
+@c-stroke-width:		2;
 
 
 
 .svg-container{
-	border: 2px solid @stroke;
+	border: 2px solid @c-stroke;
 	width: 550px;
 	height: 450px;
 	margin: auto;
 }
 
 .canvas{
-	background: @background;
-	
+	background: @c-background;
+	fill: @c-fill;
 }
 
 .circle{
-	fill: @fill;
+	fill: @c-fill;
+	stroke: @c-stroke;
+	stroke-width: @c-stroke-width;
 }
 
 
 .c-s{					//circle select box
 	stroke-width: 0;
-	stroke: @stroke;
+	stroke: #77bbba;
 	fill: transparent;
 
 }

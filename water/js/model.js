@@ -8,8 +8,8 @@ function circle (data) {
 
 	self["class"]		= "circle";
 
-	self["fill"] = ko.observable("");
-	self["stroke"] = ko.observable("none");
+	self["fill"] = ko.observable("transparent");
+	self["stroke"] = ko.observable("#ccc");
 	self["stroke-width"] = ko.observable(2);
 	self["selected"] = ko.observable(false);
 }
@@ -22,7 +22,6 @@ function canvas (data) {
 	self.selected 	= ko.observable();
 
 	self.addItem = function(){
-		console.log("push", new circle());
 		self.items.push(new circle());
 	}
 

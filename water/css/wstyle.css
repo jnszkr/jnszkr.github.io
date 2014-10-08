@@ -1,1 +1,1 @@
-.svg-container{border:2px solid #77bbba;width:550px;height:450px;margin:auto}.canvas{background:#eee}.circle{fill:#ccc}.c-s{stroke-width:0;stroke:#77bbba;fill:transparent}.c-s-s,.c-s-h{stroke-width:3px}
+.svg-container{border:2px solid #ccc;width:550px;height:450px;margin:auto}.canvas{background:#eee;fill:transparent}.circle{fill:transparent;stroke:#ccc;stroke-width:2}.c-s{stroke-width:0;stroke:#77bbba;fill:transparent}.c-s-s,.c-s-h{stroke-width:3px}
