@@ -1,0 +1,20 @@
+{
+  "name": "scenetimer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jnszkr/jnszkr.github.io",
+  "authors": [
+    "jnszkr <joszkar@gmail.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
