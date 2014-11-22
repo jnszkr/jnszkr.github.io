@@ -3,10 +3,7 @@
 QUnit.test( "Lined list test", function( assert ) {
 
 	var ls = new List;
-	assert.ok(ls, "create list succeeds");
-
-	var node = new Node;
-	assert.ok(node, "create node succeeds");
+	assert.ok(ls, "create list test");
 
 	assert.ok(ls.firstNode === undefined, "initial firstNode is not undefined");
 	
@@ -31,5 +28,6 @@ QUnit.test( "Lined list test", function( assert ) {
 	
 	assert.ok(!ls.isEmpty(), "isEmpty: list is not empty test");
 	assert.ok(ls.size() === 1, "size: one item added");
+
 	
 });
