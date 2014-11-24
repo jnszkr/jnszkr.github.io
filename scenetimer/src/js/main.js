@@ -1,47 +1,48 @@
 var options = {
 	path: "./src/img/",
 	files: [
-	"pic_01.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
-	"pic_02.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
+	"img_01.jpg",
 	] 
 };
 
@@ -80,6 +81,7 @@ UI.Counter = function(o){
 	var one_hour 	= 1000 * 60 * 60;
 	var one_minute 	= 1000 * 60;
 	var el = $(o.el);
+	var smallCounter = $("#smallCounterId");
 	var end = o.endDate.getTime();
 
 	this.getText = function(){
@@ -114,7 +116,8 @@ UI.Counter = function(o){
 	}
 
 	me.tick(function(){
-		el.text(me.getText());
+		el.text("Még " + me.getDay() + " nap és indulunk!");
+		smallCounter.text(me.getText()); 
 	});
 
 	return me;

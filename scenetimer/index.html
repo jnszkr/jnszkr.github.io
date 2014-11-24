@@ -11,16 +11,45 @@
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 
 	<style>
-		body{
-			background: #000;
+		@-webkit-keyframes myfirst {
+			from {
+				margin-top: -55px;
+			}
+			to {
+				margin-top: 20px;
+			}
 		}
-		.h1 {
+		@-webkit-keyframes bganim {
+			from {
+				//background: #fff;
+				background: #1161C3;
+			}
+			to {
+				background: #300303;
+			}
+		}
 
+		@-webkit-keyframes imganim {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+
+		.h1 {
+			text-shadow: 1px 1px 0px rgba(150, 150, 199, 1);
 			text-align: center;
-			background: #B62B2B;
+			background: #1161C3;
 			padding: 10px;
 			color: white;
-			opacity: 0.8;
+			opacity: 0.9;
+			box-shadow: 4px 4px 5px #17111D;
+			-webkit-animation: myfirst 3s; /* Chrome, Safari, Opera */
+			animation: myfirst 3s;
+			background-image: url("src/img/bg_time.jpg");
 		}
 		.bg{
 			right: 0;
@@ -31,9 +60,37 @@
 			float: left;
 			z-index: -1;
 			text-align: center;
+			background: url("src/img/bg_02.jpg") no-repeat top center fixed;	;
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+
+		@-webkit-keyframes smcntanim{
+			from{
+				bottom: -35px;
+			}
+			to {
+				bottom: 5px;
+			}
+		}
+
+		.bg div.small{
+			-webkit-animation: smcntanim 3s;
+			color: white;
+			float: right;
+			bottom: 5px;
+			right: 0px;
+			font-size: 17px;
+			position: absolute;
+			padding: 3px 5px;
+			background: #17111D;
+			opacity: 0.9;
+			z-index: 100;
 		}
 		img{
 			height: 100%;
+			opacity: 1;
+			-webkit-animation: imganim 4s;
 		}
 	</style>
 
@@ -46,7 +103,7 @@
 
 	<div class="h1" id="counterId"></div>
 	<div class="bg">
-
+		<div class="small" id="smallCounterId"></div>
 	</div>
 
 	<audio autoplay>
