@@ -50,7 +50,6 @@ var options = {
 
 
 $(document).ready(function(){
-	console.log("init");
 
 	var c = UI.Counter({
 		endDate: "2014-12-21T06:50:00",
