@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "MainSpec.js",
+  "sourceRoot": "",
+  "sources": [
+    "MainSpec.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAEA,QAAA,CAAS,YAAT,EAAuB,SAAA,GAAA;SACtB,EAAA,CAAG,oBAAH,EAAyB,SAAA,GAAA;WACxB,MAAA,CAAO,IAAP,CAAY,CAAC,IAAb,CAAkB,IAAlB,EADwB;EAAA,CAAzB,EADsB;AAAA,CAAvB,CAAA,CAAA"
+}
