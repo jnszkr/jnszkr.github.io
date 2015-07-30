@@ -1,11 +1,17 @@
 var air = air || {};
 
-air.loadResource = function (url, callback) {
+air.resources = {};
+
+air.loadResource = function (name, url, callback) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
 
   request.onload = function () {
+    air.resources[name] = {
+      url: url,
+      response: request.response
+    };
     callback.apply(request, arguments);
   };
 
