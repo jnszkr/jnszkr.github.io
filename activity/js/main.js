@@ -246,6 +246,17 @@ function startTime(time) {
 
 $(document).ready(function() {
 
+   var groupSlider = new Slider('input.slider', {
+      value: 2,
+      min: 2,
+      max: 5,
+      tooltip: 'always'
+   });
+
+   groupSlider.on('change', function () {
+      console.log(arguments);
+   });
+
    var szo = $("#szo"),
       ido = $('#ido'),
       IDO = 2 * 60,
