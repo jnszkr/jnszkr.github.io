@@ -29,7 +29,8 @@ var Application = React.createClass({
                 break;
         }
         return (
-            <div className='application'>
+            <div>
+                <Logo></Logo>
                 {currentPage}
             </div>
         );
@@ -37,4 +38,4 @@ var Application = React.createClass({
 });
 
 
-React.render(<Application/>, document.getElementById('container'));
+React.render(<Application/>, document.getElementById('app'));

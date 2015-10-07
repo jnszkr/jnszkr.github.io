@@ -6,9 +6,9 @@ var PreviewPage = React.createClass({
     },
     render: function () {
         return (
-            <div className="page">
-                <WordPreview initWord="Tessék"></WordPreview>
+            <div className="page preview">
                 <Timer initCountdown="5" onEnd={this.onTimeElapsed}></Timer>
+                <WordPreview initWord="Tessék"></WordPreview>
             </div>
         );
     }

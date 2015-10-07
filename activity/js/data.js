@@ -8,6 +8,29 @@ var lang = {
 
 };
 
+var Game = (function () {
+    var me = this;
+
+    me.word = "";
+
+    function getRandom() {
+        return 1;
+    }
+
+    return {
+        startNewGame: function () {
+            console.log("start new game");
+
+            me.word = dict[getRandom()];
+
+            console.log("selected word is ", me.word);
+        },
+        getWord: function () {
+            return me.word;
+        }
+    };
+})();
+
 var dict = ['Bowden',
     'Bukósisak',
     'Csavarhúzó',
