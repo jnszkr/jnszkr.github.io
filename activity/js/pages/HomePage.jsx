@@ -6,9 +6,9 @@ var HomePage = React.createClass({
         Game.startNewGame();
     },
     render: function () {
-        return <div className="page">
-            <div className="btn" onClick={this.onStartClicked}>
-                {lang.getText("home_startButton")}
+        return <div className = "page" >
+            <div className = "btn" onClick = { this.onStartClicked } >
+                { lang.getText("home_startButton") }
             </div>
         </div>
     }
