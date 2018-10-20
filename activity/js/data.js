@@ -5,6 +5,7 @@ var lang = {
   i_am_ready: "Készen állok",
   ok: "OK",
   solution: "Megoldás",
+  free_to_rob: "Szabad a rablás",
 
   getText: function(id) {
     return this[id] || "";
@@ -20,7 +21,7 @@ var Game = (function() {
   }
 
   return {
-    gameTime: 120,
+    gameTime: 10,
     previewTime: 15,
     startNewGame: function() {
       console.log("start new game");

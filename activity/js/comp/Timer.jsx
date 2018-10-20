@@ -17,6 +17,8 @@ var Timer = React.createClass({
   },
   tick: function() {
     if (this.state.elapsed >= this.props.initCountdown) {
+      this.setState({ elapsed: 0, countdown: this.props.initCountdown });
+      this.state.start = Date.now();
       this.props.onEnd();
     } else {
       this.setState({
