@@ -4,13 +4,16 @@
  *
  */
 var GamePage = React.createClass({
-  onTimeElapsed: function () {
-      this.props.onStateEnd();
+  getInitialState: function() {
+    return { freeToRob: false, ready: false };
   },
-  render: function () {
+  onTimeElapsed: function() {
+    this.props.onStateEnd();
+  },
+  render: function() {
     return (
-      <div className = "page" >
-        <Timer initCountdown = "120" onEnd = { this.onTimeElapsed }></Timer>
+      <div className="page">
+        <Timer initCountdown={Game.gameTime} onEnd={this.onTimeElapsed} />
       </div>
     );
   }
