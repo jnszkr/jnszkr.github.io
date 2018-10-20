@@ -21,7 +21,7 @@ var Game = (function() {
   }
 
   return {
-    gameTime: 10,
+    gameTime: 120,
     previewTime: 15,
     startNewGame: function() {
       console.log("start new game");
